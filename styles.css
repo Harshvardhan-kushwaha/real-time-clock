@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif ;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(140, 174, 206);
+}
+
+.cantainer {
+    /* background-image: url(https://e7.pngegg.com/pngimages/268/342/png-clipart-clock-face-alarm-clocks-roman-numerals-clock-angle-white-thumbnail.png); */
+    background-size: cover;
+    position: relative;
+    border-radius: 50%;
+}
+
+.clock {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 4px solid rgb(233, 35, 35);
+    background-color: rgba(106, 217, 145, 0.5);
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.clock span {
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 12px;
+    text-align: center;
+}
+
+.clock span b {
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 20px;
+}
+
+.clock::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(48, 48, 48);
+    border-radius: 50%;
+}
+
+.hand {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+.hand i {
+    position: absolute;
+    background-color: var(--clr);
+    width: 8px;
+    height: var(--h);
+    border: 1px solid;
+    border-radius: 20px;    
+}
+
